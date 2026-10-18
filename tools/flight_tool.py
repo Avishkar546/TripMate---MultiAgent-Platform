@@ -19,7 +19,6 @@ BASE_URL = "https://api.aviationstack.com/v1/flights"
 DEFAULT_ORIGIN_IATA = settings.default_origin_iata
 
 iata_airports = airportsdata.load("IATA")  # key is the IATA location code
-print(iata_airports["JFK"])
 
 COUNTRY_ALIASES = {
     "usa": "US",
@@ -532,7 +531,7 @@ def search_flights(query: str, limit: int = 5):
     return f"{route_info}\n\n" + "\n\n---\n\n".join(formatted_flights)
 
 
-if __name__ == "__main__":
-    print(search_flights("Plan a 7 days Japan trip from Bangladesh"))
-    print("\n" + "=" * 80 + "\n")
-    # print(search_flights("all country flight info"))
+# if __name__ == "__main__":
+#     print(search_flights("Plan a 7 days Japan trip from Bangladesh"))
+#     print("\n" + "=" * 80 + "\n")
+# print(search_flights("all country flight info"))
